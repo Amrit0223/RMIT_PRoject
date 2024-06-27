@@ -1,0 +1,20 @@
+m49code,country,region,cpc_code,commodity,year,loss_percentage,activity,food_supply_stage,cause_of_loss
+104,Myanmar,,0113,Rice,1994,2.1,,Harvest,"Too Mature, Leading To Breakage"
+104,Myanmar,,0113,Rice,1994,0.5,,Farm,Field Stacking And Bundling
+104,Myanmar,,0113,Rice,1994,2.1,Harvesting,Harvest,Combine-Harvester
+104,Myanmar,,0113,Rice,1994,5.4,,Harvest,Shoulder Power Reaper
+104,Myanmar,,0113,Rice,1994,5.2,,Farm,Reaper-Binder
+104,Myanmar,,0113,Rice,1994,1.9,,Harvest,Traditional Hand Cutting
+104,Myanmar,,23161.02,"Rice, milled",2015,1.78,Storage,Storage,Rodents
+104,Myanmar,,23161.02,"Rice, milled",2015,11.77,Storage,Storage,Rodents
+104,Myanmar,,23161.02,"Rice, milled",2015,5.88,Storage,Storage,Rodents
+104,Myanmar,,23161.02,"Rice, milled",2015,3.57,Storage,Storage,Rodents
+104,Myanmar,,23161.02,"Rice, milled",2015,17.65,Storage,Storage,Rodents
+104,Myanmar,,23161.02,"Rice, milled",2015,5.35,Storage,Storage,Rodents
+108,Burundi,,01701,"Beans, dry",1992,30,,Storage,
+108,Burundi,,0111,Wheat,2000,3.5,"Shelling, Threshing",,
+108,Burundi,,0111,Wheat,2000,4.43333,"Drying, Harvesting",Harvest,
+108,Burundi,,0111,Wheat,2000,2.5,Transportation,Farm,
+108,Burundi,,0111,Wheat,2000,4.86667,Storage,Farm,
+108,Burundi,,0112,Maize (corn),2000,5.26375,Storage,Farm,
+108,Burundi,,0112,Maize (corn),2000,6.42,"Drying, Harvesting",Harvest,

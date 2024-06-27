@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Food Loss and Waste Analysis</title>
+</head>
+<header>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#">Food Loss App</a>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item active">
+          <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/Mission">Mission</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Data Analysis</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Contact</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</header>
+<body>
+<h1>Food Loss Data Viewer</h1>
+<form id="dataForm">
+  Countries: <input type="text" id="countries" name="countries" placeholder="Enter countries" required>
+  Start Year: <input type="number" id="startYear" name="startYear" required>
+  End Year: <input type="number" id="endYear" name="endYear" required>
+  <button type="submit">Get Data</button>
+</form>
+<div id="results"></div>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+        $(document).ready(function() {
+            $('#dataForm').on('submit', function(e) {
+                e.preventDefault();
+                var countries = $('#countries').val().split(',');
+                var startYear = $('#startYear').val();
+                var endYear = $('#endYear').val();
+
+                $.ajax({
+                    url: '/api/loss-data/changes',
+                    type: 'GET',
+                    data: { countries: countries, startYear: startYear, endYear: endYear },
+                    success: function(data) {
+                        var results = '<ul>';
+                        data.forEach(function(item) {
+                            results += '<li>' + item.country + ': Start Year Loss = ' + item.startYearLoss + ', End Year Loss = ' + item.endYearLoss + '</li>';
+                        });
+                        results += '</ul>';
+                        $('#results').html(results);
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>

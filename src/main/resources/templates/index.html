@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Food Loss and Waste Analytics</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <style>
+        .jumbotron {
+            background: url('https://source.unsplash.com/1600x900/?food') no-repeat center center;
+            background-size: cover;
+            color: white;
+        }
+        .jumbotron h1, .jumbotron p {
+            text-shadow: 2px 2px 4px #000000;
+        }
+        .data-section {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+<header>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">Food Loss App</a>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/Mission">Mission</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/data">Data Analysis</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</header>
+<main>
+    <div class="jumbotron text-center">
+        <h1 class="display-4">Understanding Food Loss and Waste Globally</h1>
+        <p class="lead">Explore the data to see how we can make a difference together.</p>
+    </div>
+    <div class="container">
+        <div class="row data-section">
+            <div class="col-md-4">
+                <h2>Year Range</h2>
+                <p th:text="${yearRange}">Year Range: 1966 - 2022</p>
+            </div>
+            <div class="col-md-4">
+                <h2>Maximum Loss</h2>
+                <p th:text="${maxLoss}">Maximum Loss: 25.6%</p>
+                <p th:text="${maxLossCommodity}">Commodity: Wheat</p>
+            </div>
+        </div>
+    </div>
+</main>
+<footer class="footer mt-auto py-3 bg-light">
+    <div class="container text-center">
+        <span class="text-muted">&copy; 2023 Food Loss App. All rights reserved.</span>
+    </div>
+</footer>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</body>
+</html>
